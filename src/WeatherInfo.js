@@ -2,6 +2,7 @@
 
 import React from "react";
 import Timestamp from "react-timestamp";
+import Icon from "./Icon";
 
 export default function WeatherInfo(props) {
 	return (
@@ -17,20 +18,20 @@ export default function WeatherInfo(props) {
 				{props.info.city}, {props.info.country}
 			</h1>
 			<div className="row">
-				<div className="col-6 mt-3">
+				<div className="col-5 mt-3">
 					<ul className="ms-5">
 						<li className="text-capitalize">{props.info.description}</li>
 						<li>Wind: {props.info.wind} k/h</li>
 						<li>Humidity: {props.info.humidity}%</li>
 					</ul>
 				</div>
-				<div className="col-6">
+
+				<div className="col-3">
+					<Icon icon={props.info.icon} />
+				</div>
+				<div className="col-4 mt-4">
 					<h2>
-						<img
-							src={`http://openweathermap.org/img/wn/${props.info.icon}@2x.png`}
-							alt={props.info.description}
-						/>
-						{props.info.temperature}°
+						<span className="">{props.info.temperature}°</span>
 						<span className="units">
 							{" "}
 							<a href=" " rel="noopener noreferrer" className="active">
