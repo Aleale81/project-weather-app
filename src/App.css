@@ -1,1 +1,52 @@
 /** @format */
+
+.Weather .Wrapper {
+    max-width: 600px;
+    margin: auto;
+    background-image: url(newspaper.jpeg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.Weather p {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.Weather form {
+    text-align: center;
+}
+
+.Weather .btn {
+    width: 120px;
+}
+
+.Weather h1 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Weather ul {
+    list-style: none;
+}
+
+.Weather h2,
+.active {
+    font-size: 38px;
+}
+
+.Weather .units {
+    font-size: 18px;
+}
+
+.Weather a {
+    text-decoration: none;
+    color: #212529;
+}
