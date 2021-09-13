@@ -8,6 +8,17 @@ export default function App() {
 		<div className="App">
 			<div className="container">
 				<Weather />
+				<footer>
+					{" "}
+					<a
+						href="https://github.com/Aleale81/project-weather-app"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Open-sourse code
+					</a>{" "}
+					, by Alessandra Scarpellini
+				</footer>
 			</div>
 		</div>
 	);

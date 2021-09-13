@@ -5,7 +5,7 @@ import React from "react";
 export default function Weather() {
 	return (
 		<div className="Weather">
-			<div className="Wrapper m-5">
+			<div className="Wrapper mt-5">
 				<p>Monday, 13 September 12:35</p>
 				<div>
 					<form className="text-center text-capitalize">
