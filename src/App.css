@@ -1,5 +1,10 @@
 /** @format */
 
+.App {
+    max-width: 600px;
+    margin: auto;
+}
+
 .App footer {
     font-size: 14px;
     margin-top: 4px;
@@ -11,8 +16,6 @@
 }
 
 .Weather .Wrapper {
-    max-width: 600px;
-    margin: auto;
     background-image: url(newspaper.jpeg);
     background-size: cover;
     background-attachment: scroll;
@@ -38,6 +41,7 @@
 }
 
 .Weather h1 {
+    text-transform: capitalize;
     margin-top: 10px;
     text-align: center;
     font-size: 50px;
