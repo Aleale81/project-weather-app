@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
+
 export default function Weather(props) {
 	const [weatherInfo, setWeatherInfo] = useState({ loaded: false });
+	const [city, setCity] = useState(props.defaultCity);
 
 	function handleResponse(response) {
 		setWeatherInfo({
@@ -21,12 +23,30 @@ export default function Weather(props) {
 		});
 	}
 
+	function search() {
+		const apiKey = "c0e61b09ce3783df76abc904136f7ab8";
+		let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+		axios.get(apiUrl).then(handleResponse);
+	}
+
+	function handleSubmit(event) {
+		event.preventDefault();
+		search();
+	}
+
+	function updateCity(event) {
+		setCity(event.target.value);
+	}
+
 	if (weatherInfo.loaded) {
 		return (
 			<div className="Weather">
 				<div className="Wrapper mt-5">
 					<div>
-						<form className="text-center text-capitalize mt-4">
+						<form
+							className="text-center text-capitalize mt-4"
+							onSubmit={handleSubmit}
+						>
 							<div className="row">
 								<div className="col-7">
 									<input
@@ -34,6 +54,7 @@ export default function Weather(props) {
 										placeholder="Type a city"
 										autoFocus="on"
 										className="form-control ms-3"
+										onChange={updateCity}
 									/>
 								</div>
 								<div className="col-5">
@@ -51,19 +72,10 @@ export default function Weather(props) {
 			</div>
 		);
 	} else {
-		const apiKey = "c0e61b09ce3783df76abc904136f7ab8";
-		let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-		axios.get(apiUrl).then(handleResponse);
+		search();
 	}
+
 	return (
-		<div className="Loader">
-			<Loader
-				type="Hearts"
-				color="red"
-				height={200}
-				width={200}
-				timeout={4000}
-			/>
-		</div>
+		<Loader type="Hearts" color="red" height={200} width={200} timeout={4000} />
 	);
 }
