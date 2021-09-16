@@ -53,7 +53,7 @@
 
 .Weather h2,
 .active {
-    font-size: 38px;
+    font-size: 44px;
 }
 
 .Weather .units {
@@ -63,4 +63,14 @@
 .Weather a {
     text-decoration: none;
     color: #212529;
+}
+
+@media (max-width: 480px) {
+    .Weather h2,
+    .active {
+        font-size: 32px;
+    }
+    .Weather ul {
+        font-size: 12px;
+    }
 }
