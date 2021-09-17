@@ -6,9 +6,9 @@ import ReactAnimatedWeather from "react-animated-weather";
 export default function Icon(props) {
 	const iconMap = {
 		"01d": ["CLEAR_DAY", "#d38c21"],
-		"01n": ["CLEAR_NIGHT", "#2f2f8e"],
+		"01n": ["CLEAR_NIGHT", "#101d49"],
 		"02d": ["PARTLY_CLOUDY_DAY", "#c47429"],
-		"02n": ["PARTLY_CLOUDY_NIGHT", "#2f2f8e"],
+		"02n": ["PARTLY_CLOUDY_NIGHT", "#101d49"],
 		"03d": ["CLOUDY", "#7a7a7c"],
 		"03n": ["CLOUDY", "#7a7a7c"],
 		"04d": ["CLOUDY", "#525254"],
