@@ -51,18 +51,18 @@
     list-style: none;
 }
 
-.Weather h2,
-.active {
+.Weather a {
+    text-decoration: none;
+    color: #440000;
+}
+
+.Weather h2 {
     font-size: 44px;
+    color: #212529;
 }
 
 .Weather .units {
     font-size: 18px;
-}
-
-.Weather a {
-    text-decoration: none;
-    color: #212529;
 }
 
 @media (max-width: 480px) {

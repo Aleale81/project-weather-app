@@ -3,6 +3,7 @@
 import React from "react";
 import Timestamp from "react-timestamp";
 import Icon from "./Icon";
+import Units from "./Units";
 
 export default function WeatherInfo(props) {
 	return (
@@ -30,19 +31,7 @@ export default function WeatherInfo(props) {
 					<Icon icon={props.info.icon} />
 				</div>
 				<div className="col-4 mt-4">
-					<h2>
-						<span className="">{props.info.temperature}°</span>
-						<span className="units">
-							{" "}
-							<a href=" " rel="noopener noreferrer" className="active">
-								C
-							</a>
-							|
-							<a href=" " rel="noopener noreferrer">
-								F
-							</a>
-						</span>
-					</h2>
+					<Units temperature={props.info.temperature} />
 				</div>
 			</div>
 		</div>
